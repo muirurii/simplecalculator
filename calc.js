@@ -15,7 +15,7 @@
     output.textContent ='';
   }
   function clearField(clearButton){
-    if(clearButton.textContent === "AC" || output.textContent == 'Infinity'){
+    if(clearButton.textContent === "AC" || output.textContent === 'Infinity' || output.textContent === 'NaN'){
       output.textContent = '';
       previous.textContent = '';
       firstNumber = undefined;
@@ -25,7 +25,7 @@
   function calculation(){
     if(!operation) return;
       secondNumber = parseFloat(output.textContent);
-      if(!output.textContent.length >0 || !firstNumber) return;
+      if(!output.textContent.length >0 || firstNumber.length < 0) return;
       if(output.textContent.length < 2 && output.textContent === '.') return;
         switch(operation){
           case '+':
