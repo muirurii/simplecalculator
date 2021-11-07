@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 body{
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #25556188;
     height:100vh;
     width: 100vw;
@@ -16,34 +16,38 @@ header h1{
     text-align:center;
     padding: 1em;
     color: var(--main-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6em;
 }
 main{
     width: 300px;
     border-radius: 3em;
     margin: auto;
 } 
-main #output,main #previous{
-    height: 40px;
-    background-color: #c3eefc;
-    overflow: hidden;
-    padding: 0.2em;
+main #screen{
+    position: relative;
+    background-color:var(--main-color);
+    overflow:hidden;
     color: #343434;
-    font-weight: normal;
-    font-size: 1.5em;
-    display: flex;
-    flex-direction: row-reverse;
     border: 5px solid var(--main-color);
+    text-align: end;
+}
+main #screen,main #previous{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+main #output,main #previous{
+    background-color: rgba(190, 245, 245, 0.952);
+    padding: 10px 8px 0px 0px;
 }
 main #output{
-    border-top: none;
+    padding-top: 10px;
+    font-size: 1.6em;
+    height: 60px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 main #previous{
-    border-bottom: none;
-    border-radius: 0.4em;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-weight: lighter;
+    height: 40px;
     font-size: 1.3rem;
 }
 main #numbers{
@@ -70,15 +74,15 @@ main #numbers button{
     outline: none;
 }
 main #numbers button:hover{
-    opacity: 0.85;
+    opacity: 0.9;
 }
 main #numbers button:active{
-    opacity: 0.75;
+    opacity: 0.85;
 }
 main #numbers button[data-equals]{
     flex-basis:130px;
     font-size: 3.5em;
-    background-color: #040326;
+    background-color: #02011b;
 }
 main #numbers button[data-clear]{
     background-color: #041d4dd8;

@@ -9,7 +9,7 @@
     if(output.textContent.length >0 && output.textContent !== '-'){
        if(firstNumber && output.textContent.length >=1) calculation();
        firstNumber = parseFloat(output.textContent);
-       previous.textContent = output.textContent + operationButton.textContent.toLowerCase();
+       previous.textContent = `${output.textContent}${operationButton.textContent.toLowerCase()}`;
     }
     operation = operationButton.textContent;
     output.textContent ='';
