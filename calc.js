@@ -4,8 +4,8 @@
       output.textContent += numberButton.textContent;
   }
   function chooseOperation(operationButton){
-    if(output.textContent.length ===0 && operationButton.textContent === '-') return output.textContent = '-';
-    if(output.textContent.length = 1 && output.textContent === '.') return;
+    if(output.textContent.length ===0 && operationButton.textContent === '-') return appendNumber(operationButton);
+    if(output.textContent.length === 1 && output.textContent === '.') return;
     if(output.textContent.length >0 && output.textContent !== '-'){
        if(firstNumber && output.textContent.length >=1) calculation();
        firstNumber = parseFloat(output.textContent);
